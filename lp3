@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Загрузка данных из файла(файл в директории с проектом)
+data = pd.read_csv('Customers.csv', delimiter=';')
+
+# Найти людей, у которых возраст больше 30 и доход меньше 30000
+result1 = data[(data['Age'] > 30) & (data['Income'] < 30000)]
+
+# Найти людей, которые по профессии юристы и с опытом работы больше 5 лет
+result2 = data[(data['Profession'] == 'Lawyer') & (data['Work Experience'] > 5)]
+
+print(result2)
+print(result1)
